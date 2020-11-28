@@ -16,8 +16,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   void initState() {
     super.initState();
     controller = AnimationController(
-        duration: Duration(seconds: 1),
-        vsync: this,
+        duration: Duration(seconds: 2),
+        vsync : this,
     ) ;
     controller.forward();
     animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
@@ -55,6 +55,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
+                    color: Colors.black,
                   ),
                 ),
               ],
