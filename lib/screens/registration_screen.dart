@@ -8,6 +8,7 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  String email, password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,19 +19,24 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Hero(
-              tag: 'logo',
-              child: Container(
-                height: 200.0,
-                child: Image.asset('images/logo.png'),
-              ),
+            Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('images/logo.png'),
+                  ),
+                ),
             ),
+
             SizedBox(
               height: 48.0,
             ),
             TextField(
+              keyboardType: TextInputType.emailAddress,
+              textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                email = value;
               },
               decoration: kInputDecoration.copyWith(hintText: 'Enter your email')
             ),
@@ -38,8 +44,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 8.0,
             ),
             TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                password = value;
               },
               decoration: kInputDecoration.copyWith(hintText: 'Enter your password')
             ),
@@ -50,7 +58,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 colour: Colors.blueAccent,
                 title: 'Register',
                 onPressed:(){
-
+                  print(email);
+                  print(password);
                 }
             ),
 
