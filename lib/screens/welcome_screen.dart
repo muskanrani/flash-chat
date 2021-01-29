@@ -16,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   void initState() {
     super.initState();
     controller =
-        AnimationController(duration: Duration(seconds: 2),vsync : this) ;
+        AnimationController(duration: Duration(seconds: 1), vsync: this);
     animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
     controller.forward();
     controller.addListener(() {
@@ -51,7 +51,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 TypewriterAnimatedTextKit(
                   text:['Flash Chat'],
                   textStyle: TextStyle(
-                    fontSize: 45.0,
+                    fontSize: 25.0,
                     fontWeight: FontWeight.w900,
                     color: Colors.black,
                   ),
