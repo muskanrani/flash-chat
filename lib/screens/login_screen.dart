@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: kInputDecoration.copyWith(hintText: 'Enter your password.')
               ),
               SizedBox(
-                height: 24.0,
+                height: 16.0,
               ),
               RoundedButton(
                   colour: Colors.lightBlueAccent,
